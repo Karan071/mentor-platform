@@ -3,8 +3,8 @@ import cors from "cors";
 import { PrismaClient } from "@prisma/client";
 
 // Import Routes
-// import authRoutes from "./auth/auth.routes";
-// import profileRoutes from "./profile/profile.routes";
+import authRoutes from "./auth/auth.routes";
+import profileRoutes from "./profile/profile.routes";
 // import matchmakingRoutes from "./matchmaking/matchmaking.routes";
 // import notificationsRoutes from "./notifications/notifications.routes";
 // import connectionsRoutes from "./connections/connections.routes";
@@ -20,8 +20,8 @@ app.use(cors());  // Enable CORS for all routes
 app.use(express.json());  // Parse JSON bodies
 
 // Routes
-// app.use("/auth", authRoutes);  // Authentication routes
-// app.use("/profile", profileRoutes);  // Profile routes
+app.use("/auth", authRoutes);  // Authentication routes
+app.use("/profile", profileRoutes);  // Profile routes
 // app.use("/matchmaking", matchmakingRoutes);  // Matchmaking routes
 // app.use("/notifications", notificationsRoutes);  // Notifications routes
 // app.use("/connections", connectionsRoutes);  // Connections routes
